@@ -4,7 +4,7 @@ a = np.array([3, 2, 1], "uint8")
 
 assert a.dtype == "uint8"
 
-b = np.array([[0, 0, 0, 0, 0] for i in range (5)])
+b = np.zeros((5, 5))
 
 assert b.shape == (5, 5) and b.sum() == 0
 
@@ -12,11 +12,11 @@ c = np.array([[[1],[1],[1]]])
 
 assert c.ndim == 3 and c.sum() / c.size == 1
 
-d = np.array([-5, -4, -3, -2, -1, 0, 1, 2, 3, 4])
+d = np.arange(-5, 5)
 
 assert np.all(d == np.array([-5, -4, -3, -2, -1, 0, 1, 2, 3, 4]))
 
-e = np.array([0, 1/4, 1/2, 3/4, 1])
+e = np.linspace(0, 1, 5)
 
 assert np.all(e == np.array([0., 0.25, 0.5, 0.75, 1.0]))
 
@@ -26,7 +26,7 @@ fc = np.array(f[::2, 1::2])
 assert np.all(fc == np.array([[1, 3], [11, 13], [21, 23]]))
 
 g = np.ones((5, 3))
-gc = np.array([g[i].sum() for i in range(5)])
+gc = np.sum(g, axis=1)
 
 
 assert np.all(gc == np.array([3., 3., 3., 3., 3.]))
