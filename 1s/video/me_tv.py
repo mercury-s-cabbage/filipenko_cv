@@ -41,5 +41,6 @@ while camera.isOpened():
     if key == ord('q'):
         break
 
+
 camera.release()
 cv2.destroyAllWindows()

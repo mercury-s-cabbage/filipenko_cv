@@ -1,2 +1,2 @@
-### [Основы numpy](numpy_task/main.py)
+### [Основы numpy](1s/numpy_task/main.py)
 Задание на ознакомление с основными методами массивов в numpy
